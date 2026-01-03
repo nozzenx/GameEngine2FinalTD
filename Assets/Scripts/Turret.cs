@@ -83,7 +83,7 @@ public class Turret : MonoBehaviour
         if (currentTarget)
         {
             Vector3 direction = (currentTarget.transform.position - transform.position).normalized;
-            body.transform.rotation = Quaternion.LookRotation(direction);
+            body.transform.rotation = Quaternion.LookRotation(direction); 
             
             _fireTimer += Time.deltaTime;
             if (_fireTimer >= fireInterval)
@@ -93,7 +93,7 @@ public class Turret : MonoBehaviour
             }
         }
     }
-    private void Fire(Vector3 direction)
+    private void Fire(Vector3 direction) // Assagi ates etmiyor !!!!!!!!!!!!!!!!
     {
         switch (element)
         {

@@ -147,7 +147,7 @@ MonoBehaviour:
   iceBulletPrefab: {fileID: 2873636262677257624, guid: ceaa1d995558e024b9d39f6720058573, type: 3}
   radius: 1.5
   fireInterval: 1
-  bulletSpeed: 15
+  bulletSpeed: 30
   damage: 50
   enemiesInRange: []
   currentTarget: {fileID: 0}
