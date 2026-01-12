@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
@@ -7,7 +8,12 @@ public class Bullet : MonoBehaviour
 
     private bool _hasHit;
     private int _bulletDamage;
-    
+
+    private void Start()
+    {
+        Destroy(gameObject, 10);
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if (_hasHit) return;

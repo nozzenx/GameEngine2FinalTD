@@ -26,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
         _currentTarget = path.GetPositionByIndex(_targetIndex);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (path.GetPositionByIndex(_targetIndex) is null) return;
         

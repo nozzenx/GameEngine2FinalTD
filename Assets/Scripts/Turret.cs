@@ -85,10 +85,12 @@ public class Turret : MonoBehaviour
             Vector3 direction = (currentTarget.transform.position - transform.position).normalized;
             body.transform.rotation = Quaternion.LookRotation(direction); 
             
+            Vector3 directionForNozzle = ((currentTarget.transform.position + (Vector3.up * 0.6f)) - nozzle.transform.position).normalized;
+            
             _fireTimer += Time.deltaTime;
             if (_fireTimer >= fireInterval)
             {
-                Fire(direction);
+                Fire(directionForNozzle);
                 _fireTimer = 0;
             }
         }
@@ -113,8 +115,6 @@ public class Turret : MonoBehaviour
                 iceBullet.GetComponent<Rigidbody>().AddForce(direction * bulletSpeed, ForceMode.Impulse);
                 break;
         }
-        
-        
     }
 
     
